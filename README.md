@@ -12,7 +12,9 @@ Esta carpeta será donde Docker creará los contenedores. Es recomendable hacerl
 ## 4. Configura la ruta de tu proyecto
 Abre `docker-compose.yml` y ajusta la siguiente línea con la ruta de tu proyecto:
 
-```/Users/nombre/webs/cannactiva/public_html:/bitnami/wordpress```
+```
+/Users/nombre/webs/cannactiva/public_html:/bitnami/wordpress
+```
 
 Una vez configurado, puedes iniciar Docker, abre la consola y ejecuta:
 
@@ -20,4 +22,6 @@ Una vez configurado, puedes iniciar Docker, abre la consola y ejecuta:
 docker-compose up
 ```
 
-tu entorno estará listo para trabajar.
+Tu entorno local está listo para trabajar.
+
+
