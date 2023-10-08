@@ -25,3 +25,18 @@ docker-compose up
 Tu entorno local está listo para trabajar.
 
 
+
+
+```
+/Users/nombre/webs/cannactiva/public_html:/bitnami/wordpress
+```
+
+Una vez configurado, puedes iniciar Docker, abre la consola y ejecuta:
+
+```
+docker-compose up
+```
+
+Tu entorno local está listo para trabajar.
+
+
