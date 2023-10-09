@@ -2,7 +2,7 @@
 
 ## 1. Instala Docker Desktop
 Si aún no tienes Docker Desktop, [descárgalo aquí](https://www.docker.com/products/docker-desktop).
-Si Docker Desktop no funciona, fer servir [apache friends](https://www.apachefriends.org/)  u saltar al punt 5
+Si Docker Desktop no funciona, fer servir [apache friends](https://www.apachefriends.org/)  y saltar al punt 5
 
 ## 2. Crea una carpeta para tu Docker
 Esta carpeta será donde Docker creará los contenedores. Es recomendable hacerlo a nivel de `Users` para evitar problemas.
