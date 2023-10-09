@@ -2,6 +2,7 @@
 
 ## 1. Instala Docker Desktop
 Si aún no tienes Docker Desktop, [descárgalo aquí](https://www.docker.com/products/docker-desktop).
+Si Docker Desktop no funciona, fer servir [apache friends](https://www.apachefriends.org/)  u saltar al punt 5
 
 ## 2. Crea una carpeta para tu Docker
 Esta carpeta será donde Docker creará los contenedores. Es recomendable hacerlo a nivel de `Users` para evitar problemas.
@@ -65,10 +66,10 @@ docker-compose up
 Tu entorno local está listo para trabajar.
 
 
-## 4. Instala la base de datos
+## 5. Instala la base de datos
 Solicita copia de la base de datos al departamento de IT.
 
-## 5. Instala el repositorio, 
+## 6. Instala el repositorio, 
 [https://github.com/cannactiva/web-cannactiva](https://github.com/cannactiva/web-cannactiva).
 
 
