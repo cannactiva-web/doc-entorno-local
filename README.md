@@ -69,6 +69,28 @@ Tu entorno local está listo para trabajar.
 ## 5. Instala la base de datos
 Solicita copia de la base de datos al departamento de IT.
 
+Copia la base de datos en tu contenedor Docker de Mariadb
+
+```
+docker cp miarchivo.sql abcd1234:/tmp/
+```
+Entra en el contenedor
+
+```
+docker exec -it abcd1234 /bin/bash
+```
+
+Navega al directoriio tmp y carga la bbdd
+
+```
+mysql -u [nombre_usuario] -p[nombre_base_de_datos] < mibasededatos.sql
+```
+ó
+```
+/opt/bitnami/mariadb/bin/mariadb -u bn_wordpress -p bitnami_wordpress < bbdd2.sql
+```
+
+
 ## 6. Instala el repositorio, 
 [https://github.com/cannactiva/web-cannactiva](https://github.com/cannactiva/web-cannactiva).
 
