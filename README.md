@@ -49,6 +49,44 @@ services:
     driver: local
 
 ```
+ó
+```
+version: '3'
+services:
+  mariadb:
+    image: docker.io/bitnami/mariadb:11.0
+    volumes:
+      - mariadb_data:/bitnami/mariadb
+      - /Users/cristiancascante/webs/cannactiva/web-cannactiva-old/data:/bitnami/mariadb
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - MARIADB_USER=bn_wordpress
+      - MARIADB_DATABASE=bitnami_wordpress
+
+  wordpress:
+    image: docker.io/bitnami/wordpress:6
+    user: root
+    ports:
+      - '80:8080'
+      - '443:8443'
+    volumes:
+      - wordpress_data:/bitnami/wordpress
+      - /Users/cristiancascante/webs/cannactiva/web-cannactiva-old:/bitnami/wordpress
+    depends_on:
+      - mariadb
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - WORDPRESS_DATABASE_HOST=mariadb
+      - WORDPRESS_DATABASE_PORT_NUMBER=3306
+      - WORDPRESS_DATABASE_USER=bn_wordpress
+      - WORDPRESS_DATABASE_NAME=bitnami_wordpress
+
+volumes:
+  mariadb_data:
+    driver: local
+  wordpress_data:
+    driver: local
+```
 
 ## 4. Configura la ruta de tu proyecto
 Abre `docker-compose.yml` y ajusta la siguiente línea con la ruta de tu proyecto:
