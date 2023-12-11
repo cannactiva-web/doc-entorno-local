@@ -88,13 +88,33 @@ volumes:
     driver: local
 ```
 
+Crear wp-config.pho con la siguiente configuración:
+
+```
+define('WP_HOME', 'https://localhost');
+define('WP_SITEURL', 'https://localhost');
+
+define('DB_NAME', 'bitnami_wordpress');
+define('DB_USER', 'bn_wordpress');
+define('DB_PASSWORD', '');
+define('DB_HOST', 'mariadb');
+define('DB_CHARSET', 'utf8');
+define('DB_COLLATE', '');	
+```
+
 ## 4. Configura la ruta de tu proyecto
 Abre `docker-compose.yml` y ajusta la siguiente línea con la ruta de tu proyecto:
 
 ```
 /Users/nombre/webs/cannactiva/public_html:/bitnami/wordpress
+/Users/nombre/webs/cannactiva/public_html/data:/bitnami/wordpress
 ```
 
+da permisos 777 a la carpeta data
+
+```
+sudo chmod -R 777 /home/cannactiva/Cannactiva/web-cannactiva/data
+```
 Una vez configurado, puedes iniciar Docker, abre la consola y ejecuta:
 
 ```
