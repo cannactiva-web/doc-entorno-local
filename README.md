@@ -148,6 +148,17 @@ mysql -u [nombre_usuario] -p[nombre_base_de_datos] < mibasededatos.sql
 /opt/bitnami/mariadb/bin/mariadb -u bn_wordpress -p bitnami_wordpress < bbdd2.sql
 ```
 
+Si lo que quieres es actualizar la bbdd por la última versión, entramos en MYSQL, borramos la bbdd y la creamos de nuevo para luego importar:
+```
+mysql -u root -p
+```
+```
+DROP DATABASE IF EXISTS bitnami_wordpress;
+```
+```
+CREATE DATABASE bitnami_wordpress;
+```
+
 
 ## 6. Instala el repositorio, 
 [https://github.com/cannactiva/web-cannactiva](https://github.com/cannactiva/web-cannactiva).
